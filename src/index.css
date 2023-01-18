@@ -1,0 +1,30 @@
+body {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  outline: none;
+  font-family: 'Trebuchet MS', Roboto, system-ui, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  src: url('./fonts/Exo2.0-Thin.otf');
+  font-family: "Exo 2.0- Thin";
+}
+
+@font-face {
+  src: url('./fonts/Trebuchet\ MS.ttf');
+  font-family: "Trebuchet MS";
+}
+
+
