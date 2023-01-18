@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Тестовое задание: Каледина Анастасия (Junior)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 1.	Расскажите, чем, на ваш взгляд, отличается хорошая верстка от плохой с точки зрения.
 
-## Available Scripts
+•	Пользователь.  Страница должна быстро грузиться, не ломаться, иметь предсказуемое поведение и структуру. Управление должно быть понятным. Верстка должна быть аккуратной, элементы не перекрывают друг друга, читать удобно. Всю необходимую информацию пользователь должен находить быстро. 
+•	Менеджер проектов. Сайт полностью соответствует тех. заданию от клиента. Никаких сюрпризов в верстке и функционале нет.
+•	Дизайнер. Верстка именно такая, какая была в макете без добавлений от верстальщика. Желательно пиксель-перфект. Все работает именно так, как и было задумано дизайнером. Шрифты, отступы, анимация соответствуют дизайн-системе.
+•	Верстальщик. Верстка корректно работает на всех браузерах и системах. Код масштабируемый и легко читаемый. Использован компонентный подход с переменными, миксинами. Соответствует регламентам написания кода.
+•	Клиентский программист. На верстку легко накладывать код для динамики. Есть необходимые атрибуты у тегов. Есть ui-компоненты, которые программист может использовать для создания своих блоков. Код масштабируемый и легко читаемый.
+•	Серверный программист. Код оптимизирован, сжаты картинки, сторонние библиотеки и скрипты подключены с помощью cdn, а не нагружают память проекта.
 
-In the project directory, you can run:
+## 2.	Опишите основные особенности верстки крупных многостраничных сайтов, дизайн которых может меняться в процессе реализации и поддержки. Расскажите о своем опыте верстки подобных сайтов: какие методологии, инструменты и технологии вы применяли на практике. 
 
-### `npm start`
+Крупные проекты необходимо верстать так, чтобы при изменении дизайна не приходилось менять цвет/компоненты по всему сайту. Все, что повторяется, - необходимо выносить отдельно. Необходимо использовать переменные и миксины в стилях. Также необходимо создать компоненты кнопок, галочек и других часто повторяющихся фирменных элементов в отдельных файлах, и использовать классы этих компонентов, переназначая по необходимости какие-то локальные стили. Для верстки я использовала как css, так и препроцессоры sass(scss)/less, их возможности объединять какие-то настройки в одно целое для переиспользования. С точки зрения структуры документов использовала отдельные файлы для каждого компонента или для переменных, чтобы заменить их было проще. Для устранения дублирования стилей можно использовать методологию БЭМ.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 3. Опишите основные особенности верстки сайтов, которые должны одинаково хорошо отображаться как на любом современном компьютере, так и на смартфонах и планшетах под управлением iOS и Android. Расскажите о своем опыте верстки подобных сайтов: какие инструменты и технологии вы применяли, как проверяли результат на различных устройствах, какие именно устройства требовалось поддерживать. 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Все используемые теги, свойства, js метолы должны быть поддерживаемыми на всех браузерах, для этого можно использовать сайты вроде Can I Use, где можно увидеть поддерживаемость на различных браузерах. Также необходимо делать правильную структуру вложенности тегов, например, не вставлять ссылку внутрь кнопки. Это можно проверить в валидаторах кода вроде https://validator.w3.org/. При компиляции кода необходимо добавлять префиксы -webkit-, -moz-, -ms-, которые отвечают за отображение свойств на разных браузерах. Их можно добавить автоматически при компиляции css в программах и не писать вручную. Также использую ручное тестирование на разных устройствах, тк эмуляция на компьютере не всегда работает корректно.
 
-### `npm test`
+## 4. Расскажите, какие инструменты помогают вам экономить время в процессе написания, проверки и отладки кода. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+При написании и проверке экономят время сниппеты, настройки Prettier в vsCode и другие расширения, позволяющие писать быстрее: автоматическое закрывание тегов, автоимпорт, настройки jshint/eshint и т.д. Для отладки js использую консоль разработчика в Google Chrome. Для написания приложений на React использую расширения React/Redux devtools. Также использую console.log() на всех этапах написания кода, чтобы уменьшить вероятность ошибок.
 
-### `npm run build`
+## 5. Вам нужно понять, почему страница отображается некорректно в Safari на iOS и в IE на Windows. Код писали не вы, доступа к исходникам у вас нет. Ваши действия? Сталкивались ли вы с подобными проблемами на практике? 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+У данных браузеров есть свои инструменты разработчика, с помощью которых можно увидеть проблему. Консоль подскажет, где искать проблему. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 6. Дизайнер отдал вам макет, в котором не показано, как должны выглядеть интерактивные элементы при наведении мыши. Ваши действия? 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Попрошу дизайнера доделать или узнаю, почему макет именно такой. Может быть, он подскажет, что с этим сделать. Если возможности связаться с ним нет, а работу продолжить надо, сделаю сама и согласую, тк в прошлом была дизайнером интерфейсов. Если важно, чтобы это сделал именно тот человек, который делал макеты, то сделаю на свое усмотрение что-то несложное, что можно потом легко изменить. 
 
-### `npm run eject`
+## 7. Какие ресурсы вы используете для развития в профессиональной сфере? Приведите несколько конкретных примеров (сайты, блоги и так далее). Какое направление развития вам более близко: JS-программирование, HTML/CSS- верстка или что-то ещё? Какие ещё области знаний, кроме тех, что непосредственно относятся к работе, вам интересны? 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Использую все возможные ресурсы от документации до видео на Youtube. 
+Документация:
+http://htmlbook.ru/
+https://developer.mozilla.org/
+https://learn.javascript.ru/
+https://ru.reactjs.org/
+Блоги/сайты:
+https://www.udemy.com/ru/
+https://www.youtube.com/channel/UCg8ss4xW9jASrqWGP30jXiw
+https://archakov.im/
+https://www.youtube.com/@ArchakovBlog/videos
+Мне близко программирование на JS, React или чем-то другом, хотя и верстка интересна. Интересен бэкенд, разработка мобильных приложений.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 8. Расскажите нам о себе и предоставьте несколько ссылок на последние работы, выполненные вами. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Люблю писать код, аналитический склад ума. Ответственно отношусь к своим обязанностям, всегда ищу возможность расширить свои профессиональные знания и навыки. Люблю учиться и обучать других людей. Работала в команде. Позитивная, любознательная, самостоятельная, развиваюсь в разных направлениях (организация путешествий, игра на гитаре, фотография). Примеры работ можно посмотреть на GitHub. Необходимо открыть проект и в README будет описание проекта с ссылкой на размещенную страницу.
+https://github.com/AnastasiiaKaledina/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
